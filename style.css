@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Seymour+One&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Mono+One&family=Seymour+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+*{
+    margin: 0;
+    top: 0;
+}
+header{
+    font-size: 30px;
+    padding: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cell {
+    width: 80px;
+    height: 90px;
+    color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    transition: width 0.3s, height 0.3s;
+}
+
+.cell.small {
+    width: 45px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.empty{
+    color: black;
+}
+.correct{
+    background-color: #6aaa64;
+}
+.exists{
+    background-color: #c9b458;
+}
+.miss{
+    background-color: #ccc;
+}
+
+#virtual-keyboard {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#virtual-keyboard.show {
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#virtual-keyboard button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#virtual-keyboard button:hover {
+    background-color: #aaa;
+}
+
+#gameOverModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+#gameOverModalContent {
+    border-radius: 15px;
+    margin-top: 100px;
+    background-color: white;
+    margin-left: 500px;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 450px;
+    height: 600px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+}
+#gameOverModalContent p{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+#gameOverModal button {
+    width: 50%;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: #6aaa64;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.word{
+    margin-top: 50px;
+    margin-left: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 10px solid lightgray;
+    width: 50% ;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.stars {
+    font-size: 50px;
+}
+.star {
+    color: gold;
+}
+.gray-star {
+    color: lightgray;
+}
+
+.menu{
+    margin-top: 50px;
+    margin-left: 450px;
+    width: 600px;
+}
+.play{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    border: none;
+    text-align: start;
+    font-size: 35px;
+    color: #ffffff;
+    padding: 50px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #35b7e2;
+}
+
+.mode{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 35px;
+    padding: 40px 30px;
+    color: #ffffff;
+    width: 540px;
+    border-radius: 10px;
+    background-color: #b479ed;
+}
+.mode p{
+    margin-left: 20px;
+}
+
+.four{
+    display: flex;
+    margin-top: 40px;
+}
+.btn{
+    background-color: #a563fb ;
+    text-align: start;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 20px;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 420px;
+    height: 90px;
+    margin-left: 50px;
+}
+
+footer{
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 740px;
+    width: 500px;
+    margin-left: 520px;
+    height: 300px;
+    position: fixed;
+    border-radius: 30px 30px 0 0;
+    background-color: #35b7e2;
+}
+
+.rule{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+.rule_form{
+    padding: 10px;
+    width: 400px;
+    height: 620px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.rule.open{
+    visibility: visible;
+    opacity: 1;
+}
+.rule h3{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+}
+.rule h4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    color: #666666;
+}
+.form1{
+    display: flex;
+    justify-content: center;
+}
+.rule .box{
+    padding: 10px 0 0 0;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    margin-left: 10px;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+#havent{
+    position: fixed;
+    width: 500px;
+    background-color: #a563fb;
+    margin-left: 518px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#havent p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+#havent.show {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.rows{
+    display: flex;
+    justify-content: center;
+} 
+.rows .words{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 0 0 0;
+    width: 40px;
+    height: 35px;
+    background-color: rgb(226 232 240);
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}  
+.rows  .words:hover{
+    background-color: rgb(210, 211, 211);
+}
