@@ -306,3 +306,67 @@ footer{
 .rows  .words:hover{
     background-color: rgb(210, 211, 211);
 }
+
+@media (max-width: 400px) {
+    header {
+        font-size: 1.5em;
+        padding: 20px;
+        font-family: "Kanit", sans-serif;
+        font-weight: bold;
+        }
+
+    .menu{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 90%;
+    }
+
+    .play{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+        border: none;
+        text-align: start;
+        font-size: 35px;
+        color: #ffffff;
+        padding: 50px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #35b7e2;
+    }
+
+    .mode{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+        margin-top: 25px;
+        font-size: 35px;
+        padding: 40px 30px;
+        color: #ffffff;
+        width: 85%;
+        border-radius: 10px;
+        background-color: #b479ed;
+    }
+    .mode p{
+        margin-left: 20px;
+    }
+    
+    .four{
+        display: flex;
+        margin-top: 40px;
+    }
+    .btn{
+        background-color: #a563fb ;
+        text-align: start;
+        border-radius: 10px;
+        font-size: 25px;
+        padding: 20px;
+        border: none;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+        height: 90px;
+        margin-left: 50px;
+    }
+    
+    
+}
