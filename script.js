@@ -95,6 +95,7 @@ const RandomWord = () => {
 
 const word = RandomWord()
 
+
 const Table = () => {
     const elem = []
     const t = document.getElementById('t')
@@ -106,6 +107,15 @@ const Table = () => {
         for (let x = 0; x < word.length; x++) {
             const c = document.createElement('td')
             c.classList.add('empty', 'cell')
+            if (word.length === 4) {
+                c.classList.add('four-word')
+            }
+            if (word.length === 5) {
+                c.classList.add('five-word')
+            }
+            if (word.length === 6) {
+                c.classList.add('six-word')
+            }
             r.appendChild(c)
             re.push(c)
         }
@@ -220,9 +230,7 @@ RuleBtn.forEach(windowButton => {
         document.getElementById("rule").classList.add("open")
     })
 })
-
 const closeBtn = document.querySelectorAll("#close")
-
 closeBtn.forEach(windowButton => {
     windowButton.addEventListener("click", () => {
         document.getElementById("rule").classList.remove("open");
@@ -237,12 +245,10 @@ document.getElementById('keyboard-icon').addEventListener('click', () => {
     const cells = document.querySelectorAll('.cell');
     const keyboard = document.getElementById('virtual-keyboard');
 
-    // Переключить класс для уменьшения размеров ячеек
     cells.forEach(cell => {
         cell.classList.toggle('small');
     });
 
-    // Показать или скрыть виртуальную клавиатуру
     keyboard.classList.toggle('show');
 });
 
