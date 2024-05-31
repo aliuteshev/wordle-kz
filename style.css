@@ -143,8 +143,9 @@ header{
 
 .menu{
     margin-top: 50px;
-    margin-left: 450px;
-    width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .play{
     font-family: "Ubuntu", sans-serif;
@@ -154,8 +155,8 @@ header{
     font-size: 35px;
     color: #ffffff;
     padding: 50px;
-    width: 100%;
-    border-radius: 10px;
+    width: 600px;
+    border-radius: 20px;
     background-color: #35b7e2;
 }
 
@@ -178,6 +179,12 @@ header{
     display: flex;
     margin-top: 40px;
 }
+.four .f p{
+    font-size: 35px; 
+}
+.four .f h4{
+    margin-left: 45px;
+}
 .btn{
     background-color: #a563fb ;
     text-align: start;
@@ -188,7 +195,7 @@ header{
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     color: white;
-    width: 420px;
+    width: 350px;
     height: 90px;
     margin-left: 50px;
 }
@@ -307,6 +314,7 @@ footer{
     background-color: rgb(210, 211, 211);
 }
 
+
 @media (max-width: 400px) {
     header {
         font-size: 1.5em;
@@ -316,9 +324,10 @@ footer{
         }
 
     .menu{
-        margin-top: 10px;
-        margin-left: 10px;
-        width: 90%;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .play{
@@ -326,11 +335,11 @@ footer{
         font-weight: bold;
         border: none;
         text-align: start;
-        font-size: 35px;
+        font-size: 25px;
         color: #ffffff;
-        padding: 50px;
-        width: 100%;
-        border-radius: 10px;
+        padding: 30px;
+        width: 380px;
+        border-radius: 20px;
         background-color: #35b7e2;
     }
 
@@ -338,11 +347,11 @@ footer{
         font-family: "Ubuntu", sans-serif;
         font-weight: bold;
         margin-top: 25px;
-        font-size: 35px;
-        padding: 40px 30px;
+        font-size: 25px;
+        padding: 20px 10px;
         color: #ffffff;
-        width: 85%;
-        border-radius: 10px;
+        width: 360px;
+        border-radius: 20px;
         background-color: #b479ed;
     }
     .mode p{
@@ -353,20 +362,24 @@ footer{
         display: flex;
         margin-top: 40px;
     }
+    .four .f p{
+        font-size: 25px; 
+    }
+    .four .f h4{
+        margin-left: 35px;
+    }
     .btn{
         background-color: #a563fb ;
         text-align: start;
         border-radius: 10px;
-        font-size: 25px;
+        font-size: 15px;
         padding: 20px;
         border: none;
         font-family: "Ubuntu", sans-serif;
         font-weight: bold;
         color: white;
-        width: 100%;
-        height: 90px;
+        width: 165%;
+        height: 70px;
         margin-left: 50px;
     }
-    
-    
 }
