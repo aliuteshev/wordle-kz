@@ -71,20 +71,6 @@ header{
     flex-wrap: wrap;
 }
 
-#virtual-keyboard button {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-#virtual-keyboard button:hover {
-    background-color: #aaa;
-}
 
 #gameOverModal {
     display: none;
@@ -433,19 +419,21 @@ header{
         margin-top:10px ;
     }
     #virtual-keyboard {
-        margin-top: 50px;   
+        margin-top: 10px;
     }
-
+    .rows .words{
+        width: 35px;
+        height: 30px;
+    }  
     .bottom-nav{
-        padding: 20px 0 0 0;
-        display: flex;
-        justify-content: center;
-        margin-top: 750px;
-        width: 390px;
-        margin-left: 0;
-        height: 300px;
-        position: fixed;
-        border-radius: 30px 30px 0 0;
-        background-color: #35b7e2;
+        padding: 13px 0 0 0;
+        margin-top: 0;
+        width: 200px;
+        margin-left: 170px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .bottom-nav svg{
+        width: 30px;
     }
 }
